@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "bin": {
-    "create-your-vanilla-server": "./index.js"
+    "create_a_node-js_server": "./index.js"
   },
   "devDependencies": {
     "execa": "^6.1.0",
@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "plop": "plop"
+    "plop": "plop",
+    "cans": "node ./cans-automator/cans-auto.js"
   },
   "type": "module",
   "author": "",

@@ -31,6 +31,17 @@ const tasks = new Listr([
           task.skip('Npm not available, install it via `npm install -g yarn`');
         }),
   },
+  {
+    title: 'Start scaffolding out',
+    // enabled: (ctx) => !!ctx?.npm === false,
+    // only enable if npm context variable is false;
+    task: (ctx, task) =>
+      execa('npm', ['run', 'plop'])
+        .then(() => {})
+        .catch(() => {
+          task.skip('plop not available');
+        }),
+  },
 ]);
 
 tasks.run().catch((err) => {
