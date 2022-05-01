@@ -12,7 +12,7 @@
     "execa": "^6.1.0",
     "listr": "^0.14.3",
     "minimist": "^1.2.6",
-    "plop": "^3.0.5",
+    "plop": "^3.1.0",
     "plop-pack-npm-install-packages": "0.0.3"
   },
   "publishConfig": {
