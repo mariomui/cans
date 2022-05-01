@@ -15,6 +15,9 @@
     "plop": "^3.0.5",
     "plop-pack-npm-install-packages": "0.0.3"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "plop": "plop",
@@ -280,10 +283,7 @@
     "p-locate": "^3.0.0",
     "locate-path": "^3.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mariomui/cans"
-  },
+  "repository":"https://github.com/mariomui/cans",
   "keywords": [
     "cans",
     "cra-for-servers"
