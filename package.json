@@ -1,10 +1,10 @@
 {
   "name": "@mariomui/cans",
   "version": "1.4.0",
-  "description": "## How to use",
+  "description": "Create a new server for easy prototype",
   "main": "index.js",
   "bin": {
-    "create_a_node-js_server": "index.js"
+    "cans": "index.js"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
