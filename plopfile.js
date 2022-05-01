@@ -17,6 +17,7 @@ export { plopExitAction, registerPlopActionTypeExit };
 
 export default function PlopFile(plop) {
   // controller generator
+
   registerPlopActionTypeExit(plop);
   plop.setGenerator('exit', {
     prompts: [],

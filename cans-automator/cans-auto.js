@@ -8,9 +8,10 @@ const tasks = new Listr([
       //ctx can be passed in the same Listr, and task allows you to skip
       execa('git', ['rev-parse', '--is-inside-work-tree']).then(
         ({ stdout }) => {
-          if (stdout === true) {
-            console.log(typeof result, result);
+          if (stdout === 'true') {
+            console.log('Git already initialized');
           } else {
+            console.log('Initializing a git repo');
             execa('git', ['--init']);
           }
         }
@@ -21,25 +22,16 @@ const tasks = new Listr([
     // enabled: (ctx) => !!ctx?.npm === false,
     // only enable if npm context variable is false;
     task: (ctx, task) =>
-      execa('npm', ['install'])
-        .then(() => {
-          ctx.npm = true;
-          console.log('here');
+      execa('npm', ['install', '--save-dev', '@babel/core', '@babel/node'])
+        // execa('npm', ['install'])
+        .then(({ stdout, command }) => {
+          return true;
         })
-        .catch(() => {
-          ctx.npm = false;
+        .catch((err) => {
+          // ctx.npm = false;
+          console.log(err);
           task.skip('Npm not available, install it via `npm install -g yarn`');
-        }),
-  },
-  {
-    title: 'Start scaffolding out',
-    // enabled: (ctx) => !!ctx?.npm === false,
-    // only enable if npm context variable is false;
-    task: (ctx, task) =>
-      execa('npm', ['run', 'plop'])
-        .then(() => {})
-        .catch(() => {
-          task.skip('plop not available');
+          return true;
         }),
   },
 ]);
