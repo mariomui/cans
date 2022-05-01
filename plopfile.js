@@ -1,3 +1,7 @@
+import path from 'node:path';
+import fs, { ftruncate } from 'node:fs';
+const cwd = process.cwd();
+
 function _plopActionCreatorByTypeFactory(type) {
   return (name = '', message = '') => ({
     type,
@@ -53,9 +57,46 @@ export default function PlopFile(plop) {
     actions: [
       {
         type: 'add',
-        path: 'src/components/{{name}}.js',
+        path: pathResolver(cwd, 'src/components/{{name}}.js'),
+        skip: async function skip(name) {
+          const filePath = plop.renderString(
+            'src/components/{{name}}.js',
+            name
+          );
+          try {
+            const status = await pathChecker(cwd, filePath);
+            if (status === true) {
+              return 'File already exists';
+            }
+          } catch (err) {
+            console.log(err.desc, 'Creating file...');
+          }
+        },
         // templateFile: 'plop-templates/controller.hbs',
       },
     ],
+  });
+}
+
+function NotAFileError() {
+  return new Error('Not a file');
+}
+function pathResolver(dir, filepath) {
+  return path.join(dir, filepath);
+}
+function pathChecker(dir, filepath) {
+  return new Promise((resolve, reject) => {
+    fs.stat(pathResolver(dir, filepath), (err, stats) => {
+      if (err) return reject({ err, desc: 'No File Found' });
+      if (stats.isFile() === false) {
+        return reject({
+          err: NotAFileError(),
+          desc: 'Exception from pathChecker function',
+        });
+      }
+      if (stats.isFile() === true) {
+        return resolve(true);
+      }
+    });
   });
 }
