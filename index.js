@@ -7,14 +7,13 @@ const argv = minimist(args);
 
 import path, { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { cansConfig } from './cans-automator/cans.config';
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const configPath = path.resolve(__dirname, cansConfig.plop.configFilename);
 
 Plop.prepare(
   {
     cwd: argv.cwd,
-    configPath,
+    configPath: path.join(__dirname, 'plopfile.js'),
     preload: argv.preload || [],
     completion: argv.completion,
   },
