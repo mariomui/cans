@@ -1,6 +1,6 @@
 {
   "name": "@mariomui/cans",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "## How to use",
   "main": "index.js",
   "bin": {
@@ -16,7 +16,7 @@
     "plop-pack-npm-install-packages": "0.0.3"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -283,7 +283,7 @@
     "p-locate": "^3.0.0",
     "locate-path": "^3.0.0"
   },
-  "repository":"https://github.com/mariomui/cans",
+  "repository": "https://github.com/mariomui/cans",
   "keywords": [
     "cans",
     "cra-for-servers"
