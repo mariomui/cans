@@ -18,7 +18,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "plop": "plop",
-    "cans": "node ./cans-automator/cans-auto.js"
+    "cans": "node ./cans-automator/cans-auto.js",
+    "publish": "npm publish --access public"
   },
   "type": "module",
   "author": "mario mui",
