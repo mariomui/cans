@@ -1,0 +1,9 @@
+{
+  "output": "CHANGELOG.md",
+  "unreleased": true,
+  "commitLimit": false,
+  "sortCommits": "date",
+  "package": true,
+  "startingVersion": "v1.1.0",
+  "hideCredit": true
+}
