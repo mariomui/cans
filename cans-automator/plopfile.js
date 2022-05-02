@@ -1,6 +1,6 @@
 import path from 'node:path';
-import fs, { ftruncate } from 'node:fs';
-import { plopExitAction, registerPlopActionTypeExit } from './actions/exit';
+import fs from 'node:fs';
+import { plopExitAction, registerPlopActionTypeExit } from './actions/exit.js';
 const cwd = process.cwd();
 
 export default function PlopFile(plop) {

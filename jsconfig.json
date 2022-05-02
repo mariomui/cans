@@ -9,7 +9,8 @@
   "include": [
     "src/**/*",
     "cans-automator/**/*",
-    "utils/**/*"
+    "utils/**/*",
+    "index.js"
   ],
   "exclude": [
     "node_modules"
