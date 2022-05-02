@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [v1.4.8](https://github.com/mariomui/cans/compare/v1.4.8...v1.4.8)
 
+- Update to newer changelog. [`f787d7c`](https://github.com/mariomui/cans/commit/f787d7ca2eb52722145106c35a8bb59735cdd872)
+
 #### [v1.4.8](https://github.com/mariomui/cans/compare/v1.4.7...v1.4.8)
 
 > 1 May 2022
