@@ -43,11 +43,5 @@
     "listr": "^0.14.3",
     "minimist": "^1.2.6",
     "plop": "^3.1.0"
-  },
-  "auto-changelog": {
-    "output": "HISTORY.md",
-    "template": "keepachangelog",
-    "unreleased": true,
-    "commitLimit": false
   }
 }
