@@ -20,3 +20,7 @@
 * Steps:
   * run versioning
   * then run `npm run pub`
+
+## Future
+
+* [ ] Spinnaker, replace scripts with spinnaker declarative yaml
