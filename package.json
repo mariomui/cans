@@ -20,7 +20,7 @@
     "plop:dev": "node ./cans-automator/index.js",
     "deps:dev": "node ./cans-automator/cans-auto.js",
     "prepub": "npm run acl:dev && npm run save:work",
-    "save:work": "git add -A && git commit -m $(node -p \"require('./package.json').version\") && npm version $1",
+    "save:work": "git add -A && git commit -m $(node -p \"require('./package.json').version\") && npm version patch",
     "pub": "npm publish --access public",
     "acl": "auto-changelog",
     "acl:dev": "auto-changelog -c ./dev-config/.auto-changelog",
