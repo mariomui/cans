@@ -19,7 +19,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "plop:dev": "node ./cans-automator/index.js",
     "deps:dev": "node ./cans-automator/cans-auto.js",
-    "prepub:patch": "npm run version",
+    "prepub:patch": "npm run mversion patch",
     "save:work:patch": "git add -A && git commit -m $(node -p \"require('./package.json').version\") && npm version patch",
     "pub:patch": "npm publish --access public",
     "acl": "auto-changelog",
