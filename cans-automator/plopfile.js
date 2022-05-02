@@ -1,23 +1,7 @@
 import path from 'node:path';
 import fs, { ftruncate } from 'node:fs';
+import { plopExitAction, registerPlopActionTypeExit } from './actions/exit';
 const cwd = process.cwd();
-
-function _plopActionCreatorByTypeFactory(type) {
-  return (name = '', message = '') => ({
-    type,
-    name,
-    message,
-  });
-}
-const plopExitAction = _plopActionCreatorByTypeFactory('EXIT_TYPE');
-const registerPlopActionTypeExit = (plop) => {
-  plop.setActionType('EXIT_TYPE', function (answers, config, plop) {
-    return 'exited';
-    // throw 'error message';
-  });
-};
-
-export { plopExitAction, registerPlopActionTypeExit };
 
 export default function PlopFile(plop) {
   // controller generator

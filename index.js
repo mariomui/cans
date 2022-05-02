@@ -9,11 +9,11 @@ import path, { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
+console.log(argv);
 Plop.prepare(
   {
     cwd: argv.cwd,
-    configPath: path.join(__dirname, 'plopfile.js'),
+    configPath: path.join(__dirname, 'cans-automator', 'plopfile.js'),
     preload: argv.preload || [],
     completion: argv.completion,
   },
