@@ -10,10 +10,10 @@ function _plopActionCreatorByTypeFactory(type) {
 }
 
 // creates a dispatcher
-export const plopExitAction = _plopActionCreatorByTypeFactory('EXIT_TYPE');
+const plopExitAction = _plopActionCreatorByTypeFactory('EXIT_TYPE');
 
 // method that registers a function to an event.
-export const registerPlopActionTypeExit = (plop) => {
+const registerPlopActionTypeExit = (plop) => {
   plop.setActionType('EXIT_TYPE', function (answers, config, plop) {
     return 'exited';
     // throw 'error message';
@@ -24,3 +24,8 @@ export const registerPlopActionTypeExit = (plop) => {
  *  registerPlopActionTypeExit(plop);
  *  Allows us to set our custom action
  */
+
+export default {
+  plopExitAction,
+  registerPlopActionTypeExit,
+};
