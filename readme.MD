@@ -19,7 +19,7 @@
 
 * Steps:
   * run versioning
-  * then run `npm run pub`
+  * then run `npm run pub:patch`
 
 ## Future
 
