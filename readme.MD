@@ -23,4 +23,5 @@
 
 ## Future
 
+* [ ] extract the mversion acl combo into their own little scripts for listr composition
 * [ ] Spinnaker, replace scripts with spinnaker declarative yaml
