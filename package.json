@@ -27,7 +27,7 @@
     "plop:dev": "node ./cans-automator/index.js",
     "deps:dev": "node ./cans-automator/cans-auto.js",
     "install:clean": "rimraf lib && npm run build",
-    "packer": "npm run install:clean && cp package.json lib/package.json",
+    "packer": "npm run install:clean && cp package.json lib/package.json && npm pack lib",
     "prepub:patch": "npm run packer && npm run mversion patch",
     "pub:patch": "npm publish --access public",
     "acl": "auto-changelog",
