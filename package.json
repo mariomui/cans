@@ -26,7 +26,8 @@
     "plop:prod": "node ./lib/index.js",
     "plop:dev": "node ./cans-automator/index.js",
     "deps:dev": "node ./cans-automator/cans-auto.js",
-    "packer": "npm run build && cp package.json lib/package.json",
+    "install:clean": "rimraf lib && npm run build",
+    "packer": "npm run install:clean && cp package.json lib/package.json",
     "prepub:patch": "npm run packer && npm run mversion patch",
     "pub:patch": "npm publish lib --access public",
     "acl": "auto-changelog",
@@ -35,7 +36,8 @@
     "preversion": "git fetch --all && git pull",
     "version": "npm run acl && git add -A && git add .",
     "postversion": "git push --follow-tags",
-    "build": "babel --watch cans-automator -d lib"
+    "build": "babel cans-automator -d lib",
+    "build:watch": "babel cans-automator -d lib"
   },
   "author": "mario mui",
   "license": "MIT",
