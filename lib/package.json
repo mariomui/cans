@@ -1,0 +1,59 @@
+{
+  "name": "@mariomui/cans",
+  "version": "1.4.16",
+  "description": "Create a new server for easy prototype",
+  "main": "dist/index.js",
+  "bin": {
+    "cans": "cans-automator/index.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "auto-changelog": "^2.4.0",
+    "eslint": "^8.14.0",
+    "regenerator-runtime": "^0.13.9",
+    "rimraf": "^3.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "plop:prod": "node ./lib/index.js",
+    "plop:dev": "node ./cans-automator/index.js",
+    "deps:dev": "node ./cans-automator/cans-auto.js",
+    "install:clean": "rimraf lib && npm run build",
+    "packer": "npm run install:clean && cp package.json lib/package.json && npm pack lib",
+    "prepub:patch": "npm run packer && npm run mversion patch",
+    "pub:patch": "npm publish --access public",
+    "acl": "auto-changelog",
+    "files": "lib",
+    "acl:dev": "auto-changelog -c ./dev-config/.auto-changelog",
+    "mversion": "sh -c 'incarg=$(git rev-parse --abbrev-ref HEAD) && if [[ $incarg -eq \"main\" ]]; then npm version $0; else echo Please use main to version; fi;'",
+    "preversion": "git fetch --all && git pull",
+    "version": "npm run acl && git add -A && git add .",
+    "postversion": "git push --follow-tags",
+    "build": "babel cans-automator -d lib",
+    "build:watch": "babel cans-automator -d lib"
+  },
+  "author": "mario mui",
+  "license": "MIT",
+  "repository": "https://github.com/mariomui/cans",
+  "keywords": [
+    "cans",
+    "cra-for-servers"
+  ],
+  "bugs": {
+    "url": "https://github.com/mariomui/cans/issues"
+  },
+  "homepage": "https://github.com/mariomui/cans#readme",
+  "dependencies": {
+    "listr": "^0.14.3",
+    "minimist": "^1.2.6",
+    "plop": "^3.1.0"
+  }
+}
