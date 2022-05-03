@@ -1,10 +1,10 @@
 {
   "name": "@mariomui/cans",
-  "version": "1.4.16",
+  "version": "1.4.17",
   "description": "Create a new server for easy prototype",
-  "main": "dist/index.js",
+  "main": "cans-automator/index.js",
   "bin": {
-    "cans": "cans-automator/index.js"
+    "cans": "lib/index.js"
   },
   "type": "module",
   "devDependencies": {
@@ -15,7 +15,6 @@
     "@babel/preset-env": "^7.17.10",
     "auto-changelog": "^2.4.0",
     "eslint": "^8.14.0",
-    "regenerator-runtime": "^0.13.9",
     "rimraf": "^3.0.2"
   },
   "publishConfig": {
@@ -38,7 +37,7 @@
     "version": "npm run acl && git add -A && git add .",
     "postversion": "git push --follow-tags",
     "build": "babel cans-automator -d lib",
-    "build:watch": "babel cans-automator -d lib"
+    "build:watch": "babel --watch cans-automator -d lib"
   },
   "author": "mario mui",
   "license": "MIT",
@@ -54,6 +53,7 @@
   "dependencies": {
     "listr": "^0.14.3",
     "minimist": "^1.2.6",
-    "plop": "^3.1.0"
+    "plop": "^3.1.0",
+    "regenerator-runtime": "^0.13.9"
   }
 }
