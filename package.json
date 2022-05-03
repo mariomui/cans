@@ -6,7 +6,7 @@
   "bin": {
     "cans": "cans-automator/index.js"
   },
-  "type":"module",
+  "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
@@ -28,7 +28,7 @@
     "mversion": "sh -c 'incarg=$(git rev-parse --abbrev-ref HEAD) && if [[ $incarg -eq \"main\" ]]; then npm version $0; else echo Please use main to version; fi;'",
     "preversion": "git fetch --all && git pull",
     "version": "npm run acl && git add -A && git add .",
-    "postversion": "git push --follow-tags"
+    "postversion": "git push --follow-tags",
   },
   "author": "mario mui",
   "license": "MIT",
