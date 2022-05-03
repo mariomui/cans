@@ -6,7 +6,9 @@
   "bin": {
     "cans": "cans-automator/index.js"
   },
+  "type":"module",
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
@@ -30,7 +32,6 @@
   },
   "author": "mario mui",
   "license": "MIT",
-  "type": "module",
   "repository": "https://github.com/mariomui/cans",
   "keywords": [
     "cans",
