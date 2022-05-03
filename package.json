@@ -26,7 +26,7 @@
     "plop:dev": "node ./cans-automator/index.js",
     "deps:dev": "node ./cans-automator/cans-auto.js",
     "prepub:patch": "npm run mversion patch",
-    "pub:patch": "npm publish --access public",
+    "pub:patch": "npm publish dist --access public",
     "acl": "auto-changelog",
     "acl:dev": "auto-changelog -c ./dev-config/.auto-changelog",
     "mversion": "sh -c 'incarg=$(git rev-parse --abbrev-ref HEAD) && if [[ $incarg -eq \"main\" ]]; then npm version $0; else echo Please use main to version; fi;'",
