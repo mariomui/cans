@@ -2,7 +2,7 @@
   "name": "@mariomui/cans",
   "version": "1.4.13",
   "description": "Create a new server for easy prototype",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "cans": "cans-automator/index.js"
   },
@@ -10,15 +10,19 @@
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
+    "@babel/eslint-parser": "^7.17.0",
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
-    "auto-changelog": "^2.4.0"
+    "auto-changelog": "^2.4.0",
+    "eslint": "^8.14.0",
+    "regenerator-runtime": "^0.13.9"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "plop:prod": "node ./lib/index.js",
     "plop:dev": "node ./cans-automator/index.js",
     "deps:dev": "node ./cans-automator/cans-auto.js",
     "prepub:patch": "npm run mversion patch",
@@ -29,6 +33,7 @@
     "preversion": "git fetch --all && git pull",
     "version": "npm run acl && git add -A && git add .",
     "postversion": "git push --follow-tags",
+    "build": "babel --watch cans-automator -d lib"
   },
   "author": "mario mui",
   "license": "MIT",

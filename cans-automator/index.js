@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import minimist from 'minimist';
+import 'regenerator-runtime';
 import { Plop, run } from 'plop';
 
 const args = process.argv.slice(2);
