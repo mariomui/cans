@@ -1,3 +1,5 @@
+import CONSTS from './consts.js';
+
 const createNodeScriptFactory = (
   title,
   command,
@@ -17,3 +19,5 @@ function _catchCb(err) {
   console.log(err);
   return true;
 }
+
+export { CONSTS, createNodeScriptFactory };
