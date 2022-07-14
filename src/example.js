@@ -1,4 +1,3 @@
-import pick, { ten } from './exampleexports.js';
+import { pick } from './exampleexports.js';
 
 console.log(pick);
-console.log(ten);

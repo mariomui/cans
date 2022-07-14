@@ -10,4 +10,7 @@ module.exports = {
   },
   plugins: ['@babel'],
   rules: {},
+  babelOptions: {
+    configFile: 'babel.config.cjs',
+  },
 };
