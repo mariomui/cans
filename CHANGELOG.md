@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v1.4.22](https://github.com/mariomui/cans/compare/v1.4.21...v1.4.22)
+
+- Update dev instructions. [`1f9f92b`](https://github.com/mariomui/cans/commit/1f9f92bc66e360ee3ccf1c5681048a3f1d431f84)
+- Make sure controller works. [`0934b15`](https://github.com/mariomui/cans/commit/0934b1534ade4d2661aa640858dd2fb729d6281e)
+- Write additional comments on cwd. [`1922eb7`](https://github.com/mariomui/cans/commit/1922eb76f0020129a3902773c46b462fce6cdad1)
+
 #### [v1.4.21](https://github.com/mariomui/cans/compare/v1.4.20...v1.4.21)
+
+> 13 July 2022
 
 - Use acl dev instead. [`8e2c941`](https://github.com/mariomui/cans/commit/8e2c941f85c0a927ca1946f1625a0f5ec68123ac)
 
