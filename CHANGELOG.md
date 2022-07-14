@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v1.4.27](https://github.com/mariomui/cans/compare/v1.4.26...v1.4.27)
+
+- Revert to old code. [`a63b458`](https://github.com/mariomui/cans/commit/a63b458927a5fb227ceaee956c98e6ca57333e70)
+
 #### [v1.4.26](https://github.com/mariomui/cans/compare/v1.4.25...v1.4.26)
+
+> 13 July 2022
 
 - Source correctly. [`d6db339`](https://github.com/mariomui/cans/commit/d6db3395c7a17f5630e530f93c2a99eedd3c3944)
 
