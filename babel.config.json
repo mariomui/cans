@@ -4,12 +4,11 @@
   ],
   "presets": [
     [
-      "@babel/preset-env"
-      // ,
-      // {
-      //   "loose": true,
-      //   "modules": true,
-      // }
+      "@babel/preset-env",
+      {
+        "loose": true,
+        "modules": false
+      }
     ]
   ]
 }
