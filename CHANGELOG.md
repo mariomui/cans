@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v1.4.24](https://github.com/mariomui/cans/compare/v1.4.23...v1.4.24)
+
+- Change bin. [`5191296`](https://github.com/mariomui/cans/commit/51912960f6d5195eaaf02ce0d3801921fd78d13b)
+
 #### [v1.4.23](https://github.com/mariomui/cans/compare/v1.4.22...v1.4.23)
+
+> 13 July 2022
 
 - Latest stuff. [`f3cc95b`](https://github.com/mariomui/cans/commit/f3cc95b1a4d56d9fd724747cb164265dfd85389e)
 
