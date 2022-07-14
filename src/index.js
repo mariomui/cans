@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// this file executes when npx @mariomui/cans is called
 import minimist from 'minimist';
 import 'regenerator-runtime';
 import { Plop, run } from 'plop';
@@ -13,6 +14,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 Plop.prepare(
   {
     cwd: argv.cwd,
+    // tells plop where the plopfile resides
     configPath: path.join(__dirname, 'plopfile.js'),
     preload: argv.preload || [],
     completion: argv.completion,

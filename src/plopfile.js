@@ -14,7 +14,7 @@ export default function PlopFile(plop) {
     actions: [exitAction.plopExitAction()],
   });
   plop.setGenerator('controller', {
-    description: 'application controller logic',
+    description: 'application controller logico',
     prompts: [
       {
         type: 'crud',
