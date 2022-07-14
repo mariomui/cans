@@ -35,10 +35,10 @@
     "#_": "####### END PACKAGING #######",
     "acl": "auto-changelog",
     "acl:dev": "auto-changelog -c ./dev-configs/.auto-changelog",
-    "##": "####### MAIN: mversion #######",
+    "##": "####### MAIN: mversion and generates auto changelog #######",
     "mversion": "sh -c 'incarg=$(git rev-parse --abbrev-ref HEAD) && if [[ $incarg -eq \"main\" ]]; then npm version $0; else echo Please use main to version; fi;'",
     "preversion": "git fetch --all && git pull",
-    "version": "npm run acl && git add -A && git add .",
+    "version": "npm run acl:dev && git add -A && git add .",
     "postversion": "git push --follow-tags",
     "##_": "####### END VERSIONING SCRIPTS #######"
   },
