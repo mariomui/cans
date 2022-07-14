@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --experimental-specifier-resolution=node
 import 'regenerator-runtime';
 import minimist from 'minimist';
 import { Plop, run } from 'plop';

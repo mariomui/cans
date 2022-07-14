@@ -9,4 +9,4 @@ const plopActionCreatorByTypeFactory = (type) => {
   });
 };
 
-export { plopActionCreatorByTypeFactory };
+export default { plopActionCreatorByTypeFactory };

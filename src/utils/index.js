@@ -1,5 +1,5 @@
 import * as CONSTS from './consts';
-import * as ACTION_HELPERS from './action_helpers';
+import ACTION_HELPERS from './action_helpers';
 
 // import the default export from the module 'thing' and bind it to the local name thing".
 /*

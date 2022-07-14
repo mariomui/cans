@@ -33,13 +33,4 @@
 
 ## Others
 
-node:resolved runs resolution on import paths.
-es6 url imports will take way too long to check the file extension, so it'll time out, doing a resolved node on
-a js file means we are telling node to expect that the file
-will be js.
-If you run a node:resolved on a file with require in it, then the file will fail.
-node resolved is specifically done so that we can still have import and export in the code but still not have the extension.
-so it goes like node reads a file, uses the imports, sees the package json is using the new fangled modules, then applies that reasoning to the import method. Node would also treat all imports as having import and export methods.
-
-if we transpiled all the code to es5 and then use node:resolved
-the require statements would throw node off as it's expecting a different shape.
+I need to redo this repos.
