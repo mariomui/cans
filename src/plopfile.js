@@ -25,6 +25,10 @@ export default function PlopFile(plop) {
     actions: [
       {
         type: 'add',
+        // without hte path resolver it would install in the current direcotry of plopfile,
+        // which would be in the node modules.
+        // path: 'src/controllers/{{name}}.js',
+        // with the path resolver, it installs from the package.json root
         path: pathResolver(cwd, 'src/controllers/{{name}}.js'),
         skip: async function skip(name) {
           const filePath = plop.renderString(
