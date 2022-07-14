@@ -1,4 +1,4 @@
-import { exitAction } from './actions/index.js';
+import { exitAction } from './actions/index';
 
 import path from 'node:path';
 import fs from 'node:fs';
