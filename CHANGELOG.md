@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v1.4.23](https://github.com/mariomui/cans/compare/v1.4.22...v1.4.23)
+
+- Latest stuff. [`f3cc95b`](https://github.com/mariomui/cans/commit/f3cc95b1a4d56d9fd724747cb164265dfd85389e)
+
 #### [v1.4.22](https://github.com/mariomui/cans/compare/v1.4.21...v1.4.22)
+
+> 13 July 2022
 
 - Update dev instructions. [`1f9f92b`](https://github.com/mariomui/cans/commit/1f9f92bc66e360ee3ccf1c5681048a3f1d431f84)
 - Make sure controller works. [`0934b15`](https://github.com/mariomui/cans/commit/0934b1534ade4d2661aa640858dd2fb729d6281e)
