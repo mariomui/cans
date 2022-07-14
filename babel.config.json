@@ -1,7 +1,6 @@
 {
   "plugins": [
-    "@babel/plugin-proposal-export-default-from",
-    "add-module-exports"
+    "@babel/plugin-proposal-export-default-from"
   ],
   "presets": [
     [
