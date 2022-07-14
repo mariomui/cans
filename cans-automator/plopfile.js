@@ -19,13 +19,27 @@ export default function PlopFile(plop) {
       {
         type: 'crud',
         name: 'name',
-        message: 'component name please',
+        message: 'controller name please',
       },
     ],
     actions: [
       {
         type: 'add',
         path: 'src/controllers/{{name}}.js',
+        skip: async function skip(name) {
+          const filePath = plop.renderString(
+            'src/components/{{name}}.js',
+            name
+          );
+          try {
+            const status = await pathChecker(cwd, filePath);
+            if (status === true) {
+              return 'File already exists';
+            }
+          } catch (err) {
+            console.log(err.desc, 'Creating file...');
+          }
+        },
         // templateFile: 'plop-templates/controller.hbs',
       },
     ],
