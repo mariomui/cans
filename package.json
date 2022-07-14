@@ -31,7 +31,7 @@
     "#": "####### PUBLISHING #######",
     "pub:patch": "npm publish --access public",
     "prepub:patch": "npm run packer && npm run mversion patch",
-    "packer": "npm run install:clean && cp package.json lib/package.json && npm pack lib",
+    "packer": "npm run install:clean && cp package.json lib/package.json",
     "#_": "####### END PACKAGING #######",
     "acl": "auto-changelog",
     "acl:dev": "auto-changelog -c ./dev-configs/.auto-changelog",
