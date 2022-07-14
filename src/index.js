@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-// this file executes when npx @mariomui/cans is called
-import minimist from 'minimist';
 import 'regenerator-runtime';
+import minimist from 'minimist';
 import { Plop, run } from 'plop';
 
 const args = process.argv.slice(2);
