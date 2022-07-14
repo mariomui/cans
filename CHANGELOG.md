@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v1.4.31](https://github.com/mariomui/cans/compare/v1.4.30...v1.4.31)
+
+- Remove extensions using experimental. [`b3ec19a`](https://github.com/mariomui/cans/commit/b3ec19acea58cf412d6c81d951d8763dc68b6530)
+
 #### [v1.4.30](https://github.com/mariomui/cans/compare/v1.4.29...v1.4.30)
+
+> 13 July 2022
 
 - Remove extensions again. [`3402abc`](https://github.com/mariomui/cans/commit/3402abcf69c76e6e5ab21e3501f3c15239d3d1cd)
 
