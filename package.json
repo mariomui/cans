@@ -1,6 +1,6 @@
 {
   "name": "@mariomui/cans",
-  "version": "1.4.27",
+  "version": "1.4.28",
   "description": "Create a new server for easy prototype",
   "main": "src/index.js",
   "bin": {
