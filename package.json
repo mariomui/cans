@@ -4,7 +4,7 @@
   "description": "Create a new server for easy prototype",
   "main": "src/index.js",
   "bin": {
-    "cans": "./lib/entry.sh"
+    "cans": "lib/index.js"
   },
   "type": "module",
   "devDependencies": {
@@ -25,10 +25,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d lib",
     "build:watch": "babel --watch src -d lib",
-    "plop:prod": "./entry.sh ./lib/index.js",
-    "plop:dev": "./entry.sh ./src/index.js",
-    "deps:dev": "./entry.sh./src/cans-auto.js",
-    "install:clean": "rimraf lib && npm run build && cp entry.sh lib/entry.sh",
+    "node:resolved": "node --experimental-specifier-resolution=node $1",
+    "plop:prod": "npm run node:resolved ./lib/index.js",
+    "plop:dev": "npm run node:resolved ./src/index.js",
+    "deps:dev": "npm run node:resolved ./src/cans-auto.js",
+    "install:clean": "rimraf lib && npm run build",
     "#": "####### PUBLISHING #######",
     "pub:patch": "npm publish --access public",
     "prepub:patch": "npm run packer && npm run mversion patch",
