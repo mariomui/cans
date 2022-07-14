@@ -4,7 +4,7 @@
   "description": "Create a new server for easy prototype",
   "main": "src/index.js",
   "bin": {
-    "cans": "./entry.sh ./index.js"
+    "cans": "./entry.sh ./lib/index.js"
   },
   "type": "module",
   "devDependencies": {
