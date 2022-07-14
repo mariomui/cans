@@ -9,6 +9,7 @@
 * create some code in src
 * npm run build:clean
   * uses babel to turn javascript code to es5
+*
 
 ## versioning
 
