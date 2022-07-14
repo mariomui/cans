@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v1.4.30](https://github.com/mariomui/cans/compare/v1.4.29...v1.4.30)
+
+- Remove extensions again. [`3402abc`](https://github.com/mariomui/cans/commit/3402abcf69c76e6e5ab21e3501f3c15239d3d1cd)
+
 #### [v1.4.29](https://github.com/mariomui/cans/compare/v1.4.28...v1.4.29)
+
+> 13 July 2022
 
 - Babel it correct. [`c426bbe`](https://github.com/mariomui/cans/commit/c426bbe14777a4c708de6b2f7cce449b0aa252f0)
 
