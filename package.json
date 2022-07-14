@@ -4,14 +4,15 @@
   "description": "Create a new server for easy prototype",
   "main": "src/index.js",
   "bin": {
-    "cans": "lib/index.js"
+    "cans": "./entry.sh ./index.js"
   },
   "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.17.10",
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.18.6",
     "@babel/eslint-parser": "^7.17.0",
-    "@babel/node": "^7.17.10",
+    "@babel/node": "^7.18.6",
+    "@babel/plugin-proposal-export-default-from": "^7.18.6",
     "@babel/preset-env": "^7.17.10",
     "auto-changelog": "^2.4.0",
     "eslint": "^8.14.0",
@@ -24,10 +25,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d lib",
     "build:watch": "babel --watch src -d lib",
-    "plop:prod": "node ./lib/index.js",
-    "plop:dev": "node ./src/index.js",
-    "deps:dev": "node ./src/cans-auto.js",
-    "install:clean": "rimraf lib && npm run build",
+    "plop:prod": "./entry.sh ./lib/index.js",
+    "plop:dev": "./entry.sh ./src/index.js",
+    "deps:dev": "./entry.sh./src/cans-auto.js",
+    "install:clean": "rimraf lib && npm run build && cp entry.sh lib/entry.sh",
     "#": "####### PUBLISHING #######",
     "pub:patch": "npm publish --access public",
     "prepub:patch": "npm run packer && npm run mversion patch",
@@ -54,6 +55,7 @@
   },
   "homepage": "https://github.com/mariomui/cans#readme",
   "dependencies": {
+    "execa": "^6.1.0",
     "listr": "^0.14.3",
     "minimist": "^1.2.6",
     "plop": "^3.1.0",

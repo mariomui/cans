@@ -1,4 +1,5 @@
-export default function (plop) {
+// never use default when the reciever is import * as
+export function plopper(plop) {
   plop.setActionType('babel-load', function (answers, config, plop) {
     console.log(config, prop, answers);
 

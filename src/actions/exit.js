@@ -1,18 +1,9 @@
-import { CONSTS } from '../utils/index.js';
-
-/**
- * @description makes a private method payload-maker: type, name, message
- */
-function _plopActionCreatorByTypeFactory(type) {
-  return (name = '', message = '') => ({
-    type,
-    name,
-    message,
-  });
-}
+import { CONSTS, ACTION_HELPERS } from '../utils/index.js';
 
 // creates a dispatcher
-const plopExitAction = _plopActionCreatorByTypeFactory(CONSTS.EXIT_TYPE);
+const plopExitAction = ACTION_HELPERS.plopActionCreatorByTypeFactory(
+  CONSTS.EXIT_TYPE
+);
 
 // method that registers a function to an event.
 const registerPlopActionTypeExit = (plop) => {
@@ -27,7 +18,4 @@ const registerPlopActionTypeExit = (plop) => {
  *  Allows us to set our custom action
  */
 
-export default {
-  plopExitAction,
-  registerPlopActionTypeExit,
-};
+export { plopExitAction, registerPlopActionTypeExit };

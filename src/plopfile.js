@@ -1,4 +1,4 @@
-import { exitAction } from './actions/index.js';
+import { exitAction } from './actions/index';
 
 import path from 'node:path';
 import fs from 'node:fs';
@@ -9,6 +9,7 @@ const cwd = process.cwd();
 export default function PlopFile(plop) {
   // controller generator
   exitAction.registerPlopActionTypeExit(plop);
+
   plop.setGenerator('exit', {
     prompts: [],
     actions: [exitAction.plopExitAction()],

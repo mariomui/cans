@@ -1,5 +1,1 @@
-const EXIT_TYPE = 'EXIT';
-
-export default {
-  EXIT_TYPE,
-};
+export const EXIT_TYPE = 'EXIT';

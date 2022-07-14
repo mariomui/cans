@@ -1,5 +1,5 @@
-import exitAction from './exit.js';
-import babelLoadAction from './babel-load.js';
+import * as exitAction from './exit.js';
+import * as babelLoadAction from './babel-load.js';
 
 export { exitAction, babelLoadAction };
 // this does not work with default

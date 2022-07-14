@@ -1,4 +1,10 @@
-import CONSTS from './consts.js';
+import * as CONSTS from './consts';
+import * as ACTION_HELPERS from './action_helpers';
+
+// import the default export from the module 'thing' and bind it to the local name thing".
+/*
+if you {deconstruct} that just means directly go to the object.
+*/
 
 const createNodeScriptFactory = (
   title,
@@ -20,4 +26,4 @@ function _catchCb(err) {
   return true;
 }
 
-export { CONSTS, createNodeScriptFactory };
+export { CONSTS, createNodeScriptFactory, ACTION_HELPERS };

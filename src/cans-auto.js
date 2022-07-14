@@ -1,7 +1,11 @@
 import { execa } from 'execa';
 import Listr from 'listr';
 // you will alwasy need execa and lisr
-const tasks = new Listr([
+
+/* 
+  Contains a list of TASKS for plopfile to use.
+*/
+export const initGitAndInstall = new Listr([
   {
     title: 'Git',
     task: (ctx, task) =>
@@ -35,7 +39,3 @@ const tasks = new Listr([
         }),
   },
 ]);
-
-tasks.run().catch((err) => {
-  console.error(err);
-});
