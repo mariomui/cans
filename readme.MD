@@ -1,25 +1,15 @@
-# CANS
+# CANS (downstream)
 
 ## How to use
 
+* installing as a dev dependency
+  * npm install @mariomui/cans
+* create an npm script
+  * cans : "cans"
 * npm run cans
-
-## What each file does
-
-* cans auto
-
-## For Developers
-
-### versioning
-
-* `npm run mversion {patch, minor major}`
-  * fetches, versions, makes a change log and pushes up to main.
-
-### publishing
-
-* Steps:
-  * run versioning
-  * then run `npm run pub:patch`
+  * this calls file located in bin
+    * the location is lib/index.js
+    * lib is the output folder of cans after it installs or
 
 ## Future
 

@@ -8,7 +8,7 @@
   },
   "include": [
     "src/**/*",
-    "cans-automator/**/*",
+    "src/**/*",
     "utils/**/*",
     "lib/**/*"
     // "index.js"
