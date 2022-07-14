@@ -25,7 +25,7 @@ export default function PlopFile(plop) {
     actions: [
       {
         type: 'add',
-        path: 'src/controllers/{{name}}.js',
+        path: pathResolver(cwd, 'src/controllers/{{name}}.js'),
         skip: async function skip(name) {
           const filePath = plop.renderString(
             'src/components/{{name}}.js',
