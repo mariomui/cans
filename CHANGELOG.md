@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v1.4.34](https://github.com/mariomui/cans/compare/v1.4.33...v1.4.34)
+
+- Fix git find. [`a414b9d`](https://github.com/mariomui/cans/commit/a414b9d155bc141e22b1d5b5f84de2cc00a5622c)
+
 #### [v1.4.33](https://github.com/mariomui/cans/compare/v1.4.32...v1.4.33)
+
+> 25 November 2022
 
 #### [v1.4.32](https://github.com/mariomui/cans/compare/v1.4.31...v1.4.32)
 
