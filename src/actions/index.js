@@ -1,3 +1,4 @@
+import { initGitAndInstallTask } from '../cans-auto.js';
 import { ACTION_HELPERS, CONSTS } from '../utils/index.js';
 import * as babelLoadAction from './babel-load.js';
 import * as exitAction from './exit.js';
@@ -9,7 +10,7 @@ const plopTestAction = ACTION_HELPERS.plopActionCreatorByTypeFactory(
 // method that registers a function to an event.
 const registerPlopActionTypeTest = (plop) => {
   plop.setActionType(CONSTS.TEST, function (answers, config, plop) {
-    initGitAndInstallTask().;
+    initGitAndInstallTask.run();
     // throw 'error message';
   });
 };
