@@ -17,8 +17,8 @@
 * create some code in src
 * plop:dev
 * see it run.
-* Plopfile in src has the list of options you can do.
-* the index.js tells us where plop runs the plopfile.
+* Plop file in src has the list of options you can do.
+* the `index.js` tells us where plop runs the plop file.
 
 ## versioning
 

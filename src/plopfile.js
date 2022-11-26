@@ -1,15 +1,18 @@
-import { exitAction } from './actions';
+import { exitAction, testAction } from './actions';
 
-import path from 'node:path';
 import fs from 'node:fs';
-// import { createRequire } from 'node:module';
-// const require = createRequire(import.meta.url);
+import path from 'node:path';
+
 const cwd = process.cwd();
 
 export default function PlopFile(plop) {
   // controller generator
   exitAction.registerPlopActionTypeExit(plop);
-
+  testAction.registerPlopActionTypeTest(plop);
+  plop.setGenerator('test', {
+    prompts: [],
+    actions: [testAction.plopTestAction()],
+  });
   plop.setGenerator('exit', {
     prompts: [],
     actions: [exitAction.plopExitAction()],
