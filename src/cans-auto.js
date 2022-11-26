@@ -1,5 +1,6 @@
 import { execa } from 'execa';
 import Listr from 'listr';
+import fs from 'node:fs';
 // you will alwasy need execa and lisr
 
 /* 
@@ -8,8 +9,11 @@ import Listr from 'listr';
 export const initGitAndInstallTask = new Listr([
   {
     title: 'Git',
-    task: (ctx, task) =>
+    task: (ctx, task) => {
       //ctx can be passed in the same Listr, and task allows you to skip
+      if (fs.existsSync('./.git')) {
+        return;
+      }
       execa('git', ['rev-parse', '--is-inside-work-tree']).then(
         ({ stdout }) => {
           if (stdout === 'true') {
@@ -19,7 +23,8 @@ export const initGitAndInstallTask = new Listr([
             execa('git', ['--init']);
           }
         }
-      ),
+      );
+    },
   },
   {
     title: 'Install package dependencies with npm',
