@@ -5,7 +5,7 @@ import Listr from 'listr';
 /* 
   Contains a list of TASKS for plopfile to use.
 */
-export const initGitAndInstall = new Listr([
+export const initGitAndInstallTask = new Listr([
   {
     title: 'Git',
     task: (ctx, task) =>
